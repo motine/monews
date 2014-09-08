@@ -1,0 +1,20 @@
+GEM
+  specs:
+    curb (0.8.6)
+    feedjira (1.4.0)
+      curb (~> 0.8)
+      loofah (~> 2.0)
+      sax-machine (~> 1.0)
+    loofah (2.0.1)
+      nokogiri (>= 1.5.9)
+    mini_portile (0.6.0)
+    nokogiri (1.6.3.1)
+      mini_portile (= 0.6.0)
+    sax-machine (1.0.0)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  feedjira
+  nokogiri
