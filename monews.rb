@@ -14,6 +14,8 @@
 # - Feed Generator: http://ruby-doc.org/stdlib-1.9.3/libdoc/rss/rdoc/RSS/Maker.html
 # - Uploader: http://net-ssh.github.io/sftp/v2/api/classes/Net/SFTP/Operations/Upload.html
 
+# TODO refactor article list and article into its own file.
+
 
 require 'open-uri' # for open to work with URLs
 require 'yaml'
@@ -160,4 +162,6 @@ def main()
   end
 end
 
-main()
+if __FILE__ == $0 then
+  main()
+end
