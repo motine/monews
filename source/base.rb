@@ -9,7 +9,7 @@ module Source
     end
     
     def fetch
-      raise 'Not implemented'
+      raise 'Must be implemented in subclass.'
     end
   end
 end
