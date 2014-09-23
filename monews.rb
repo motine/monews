@@ -1,7 +1,7 @@
-require_relative "disable_ssl_warning"
+require_relative "support/disable_ssl_warning"
 
-require_relative "core_ext"
-require_relative "bowel"
+require_relative "support/core_ext"
+require_relative "support/bowel"
 require_relative "feeds/feed"
 require_relative "feeds/rss_feed"
 require_relative "feeds/hackernews_feed"

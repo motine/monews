@@ -6,6 +6,8 @@
 
     TODO See notes in dayone...
 
+Simply run `monews.rb`.
+
 ## Installation
 
 * Needs Ruby >= 2.0.0p353.
