@@ -259,7 +259,7 @@ def instanciate_feeds(feeds_config)
   feeds_config.each do |fc|
     klass = Feed::class_for(fc["type"])
     fatal_error("The type '#{fc["type"]}' for #{fc["name"]} could not be instanciated. Spelling mistake?") if klass.nil?
-    feeds << klass.new(fc["name"], fc["desc"], fc["max_size"], File.dirname(__FILE__), fc)
+    feeds << klass.new(fc["name"], fc["desc"], fc["max_size"], File.join(File.dirname(__FILE__), "tmp"), fc)
   end
   return feeds
 end

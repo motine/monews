@@ -1,4 +1,4 @@
-cache/*
-feeds/*
+tmp/cache/*
+tmp/feeds/*
 config.yaml
 backup/*
