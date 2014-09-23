@@ -1,4 +1,4 @@
 tmp/cache/*
-export/*
+rss/*
 config.yaml
 backup/*

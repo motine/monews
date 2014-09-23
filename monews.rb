@@ -135,7 +135,7 @@ class Feed
     FileUtils.mkdir_p(File.dirname(self.cache_path)) unless File.directory?(File.dirname(self.cache_path))
   end
   def rss_path
-    File.join(@base_path, "export", "#{@name.path_safe}.rss")
+    File.join(@base_path, "rss", "#{@name.path_safe}.rss")
   end
   # creates the directory for rss files
   def rss_path!
