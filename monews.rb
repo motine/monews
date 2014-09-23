@@ -129,13 +129,13 @@ class Feed
   # ---
   # Path helper
   def cache_path
-    File.join(@base_path, "cache", "#{@name.path_safe}.yaml")
+    File.join(@base_path, "tmp", "cache", "#{@name.path_safe}.yaml")
   end
   def cache_path!
     FileUtils.mkdir_p(File.dirname(self.cache_path)) unless File.directory?(File.dirname(self.cache_path))
   end
   def rss_path
-    File.join(@base_path, "feeds", "#{@name.path_safe}.rss")
+    File.join(@base_path, "export", "#{@name.path_safe}.rss")
   end
   # creates the directory for rss files
   def rss_path!
@@ -259,7 +259,7 @@ def instanciate_feeds(feeds_config)
   feeds_config.each do |fc|
     klass = Feed::class_for(fc["type"])
     fatal_error("The type '#{fc["type"]}' for #{fc["name"]} could not be instanciated. Spelling mistake?") if klass.nil?
-    feeds << klass.new(fc["name"], fc["desc"], fc["max_size"], File.join(File.dirname(__FILE__), "tmp"), fc)
+    feeds << klass.new(fc["name"], fc["desc"], fc["max_size"], File.dirname(__FILE__), fc)
   end
   return feeds
 end
