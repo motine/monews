@@ -1,9 +1,3 @@
-# needs RUBY >= 2.0.0p353
-# Run `bundle install`
-
-# TODO add setting to spec how often to refresh (e.g. only every 10 hours)
-# TODO check that the setting how often to pull in new data is obayed.
-
 require_relative "disable_ssl_warning"
 
 require_relative "core_ext"
