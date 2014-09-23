@@ -1,0 +1,22 @@
+---
+feeds:
+  - name: tagesschau
+    desc: ...
+    max_size: 30
+    consume_top: 5
+    type: rss
+    url: http://www.tagesschau.de/xml/atom/
+
+  - name: hackernews
+    desc: ...
+    max_size: 90
+    consume_top: 30
+    type: hackernews
+    url: https://news.ycombinator.com/best
+
+  - name: Medium Top-100
+    desc: ...
+    max_size: 25
+    consume_top: 10
+    type: medium100
+    url: https://medium.com/top-100
