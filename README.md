@@ -6,10 +6,11 @@
 
     TODO See notes in dayone...
 
-## Requirements
+## Installation
 
 * Needs Ruby >= 2.0.0p353.
 * Run `bundle install`
+* Copy `config.yaml.example` to `config.yaml` and adjust it.
 
 ## Things left todo
 
