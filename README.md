@@ -26,6 +26,9 @@ You may need to install `brew install ec2-ami-tools ec2-api-tools` on a Mac firs
 
 **TODO** recurring auto scale.
 
+**TODO** Where to get the links to the bucket (directly at the file).
+
+
 More info for recurring setup is [here](http://alestic.com/2011/11/ec2-schedule-instance).
 
 ## Things left todo

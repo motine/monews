@@ -1,9 +1,12 @@
 #!/bin/bash
 
+# run `sudo` sh for testing
+
 # setup
-sudo yum -y groupinstall development
-sudo yum -y install git ruby-devel curl-devel # openssl openssl-devel
+yum -y groupinstall development
+yum -y install git ruby-devel curl-devel # openssl openssl-devel
 gem install bundler
+ln -s /usr/local/share/ruby/gems/2.0/gems/bundler-1.7.3/bin/bundle /usr/bin # put bundle in path
 git clone https://github.com/motine/monews.git
 cd monews
 cp config.yaml.example config.yaml
@@ -25,4 +28,4 @@ aws s3 cp --recursive rss s3://monews/rss
 sleep 60
 
 # kill instance
-sudo shutdown -h 0
+shutdown -h 0 &
