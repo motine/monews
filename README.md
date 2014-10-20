@@ -24,12 +24,22 @@ To start the instance from the console use the following:
 
 You may need to install `brew install ec2-ami-tools ec2-api-tools` on a Mac first. Don't forget to set your bash environment with the proper access keys and region. The code above assumes you have a security group `everywhere` and a role which has access to s3 named `monews`. Also note, the specified AMI is only available at Ireland._
 
-**TODO** recurring auto scale.
+You will need to add the following policy to your bucket:
+
+    {
+      "Version": "2008-10-17",
+      "Statement": [{
+        "Sid": "AllowPublicRead",
+        "Effect": "Allow",
+        "Principal": { "AWS": "*" },
+        "Action": ["s3:GetObject"],
+        "Resource": ["arn:aws:s3:::monews/*" ]
+      }]
+    }
+
+**TODO** recurring auto scale (see [here](http://alestic.com/2011/11/ec2-schedule-instance) for inspiration).
 
 **TODO** Where to get the links to the bucket (directly at the file).
-
-
-More info for recurring setup is [here](http://alestic.com/2011/11/ec2-schedule-instance).
 
 ## Things left todo
 
