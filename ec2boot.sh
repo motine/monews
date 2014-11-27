@@ -5,9 +5,9 @@
 # setup
 yum -y groupinstall development
 yum -y install git ruby-devel curl-devel # openssl openssl-devel
-gem install bundler
+gem install bundler -v 1.7.7
 # TODO make the next line more stable
-ln -s /usr/local/share/ruby/gems/2.0/gems/bundler-1.7.4/bin/bundle /usr/bin # put bundle in path
+ln -s /usr/local/share/ruby/gems/2.0/gems/bundler-1.7.7/bin/bundle /usr/bin # put bundle in path
 git clone https://github.com/motine/monews.git
 cd monews
 cp config.yaml.example config.yaml
