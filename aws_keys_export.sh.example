@@ -1,0 +1,3 @@
+#!/bin/bash
+export AWS_ACCESS_KEY="ABCDEF"
+export AWS_SECRET_KEY="/hahahahahaha+"
