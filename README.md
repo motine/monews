@@ -14,6 +14,10 @@ Simply run `monews.rb`.
 * Run `bundle install`
 * Copy `config.yaml.example` to `config.yaml` and adjust it.
 
+### Docker
+
+Before running the build command (e.g. `docker build -t monews:latest .`) you need to copy `config.yaml.example` to `config.yaml` and `aws_keys_export.sh.example` to `aws_keys_export.sh`. Adjust the files and then run build. After that you can go ahead and just run something like `docker run --rm -t monews:latest`.
+
 ### AWS
 
 When setting up a machine manually which runs monews: Make sure the instance has the correct role so it can access the S3 storage. Also, you may delete the storage on termination and set the shutdown behaviour to terminate. And obviously, the launch script (`ec2boot.sh`) shall be added.
