@@ -1,5 +1,3 @@
 tmp/cache/*
 rss/*
-config.yaml
-aws_keys_export.sh
 backup/*

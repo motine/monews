@@ -16,7 +16,9 @@ Simply run `monews.rb`.
 
 ### Docker
 
-Before running the build command (e.g. `docker build -t monews:latest .`) you need to copy `config.yaml.example` to `config.yaml` and `aws_keys_export.sh.example` to `aws_keys_export.sh`. Adjust the files and then run build. After that you can go ahead and just run something like `docker run --rm -t monews:latest`.
+Before running the build command (e.g. `docker build -t monews:latest .`) you need to copy `config.yaml.example` to `config.yaml` and `aws_keys_export.sh.example` to `aws_keys_export.sh`. Adjust the files and then run build. After that you can go ahead and just run something like `docker run --rm -t -v LOCAL_PATH_TO_MONEWS/monews/config:/opt/monews/config monews:latest`.
+<!-- `docker run --rm -t -v ~/Repositories/monews/config:/opt/monews/config monews:latest`. -->
+
 
 ### AWS
 

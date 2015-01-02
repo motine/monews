@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # load authentication info into environment
-source aws_keys_export.sh
+source config/aws_keys_export.sh
 
 # download from s3
 rm -rf tmp rss

@@ -13,7 +13,7 @@ def fatal_error(message, code=1)
 end
 
 def read_config
-  config_path = File.join(File.dirname(__FILE__), "config.yaml")
+  config_path = File.join(File.dirname(__FILE__), "config/config.yaml")
   begin
     return YAML.load_file(config_path)
   rescue Exception => e
