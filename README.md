@@ -16,8 +16,13 @@ Simply run `monews.rb`.
 
 ### Docker
 
-Before running the build command (e.g. `docker build -t monews:latest .`) you need to copy `config.yaml.example` to `config.yaml` and `aws_keys_export.sh.example` to `aws_keys_export.sh`. Adjust the files and then run build. After that you can go ahead and just run something like `docker run --rm -t -v LOCAL_PATH_TO_MONEWS/monews/config:/opt/monews/config monews:latest`.
-<!-- `docker run --rm -t -v ~/Repositories/monews/config:/opt/monews/config monews:latest`. -->
+You can build the container via `docker build -t monews:latest .`. When running the container you need to give it a config folder with a `config.yaml` in it. You may copy `config.yaml.example` to `config.yaml` and use this folder. Now you can go ahead and run something like:
+
+```bash
+docker run --rm -t -v LOCAL_PATH_TO_CONFIG_FOLDER:/opt/monews/config -e "AWS_ACCESS_KEY_ID=..." -e "AWS_SECRET_ACCESS_KEY=..." -e "EC2_URL=https://END-POINT" monews:latest`
+```
+
+Note that you can find the service endpoints via the [Amazon documentation](http://docs.aws.amazon.com/general/latest/gr/rande.html#ec2_region).
 
 
 ### AWS
