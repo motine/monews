@@ -20,7 +20,7 @@ Simply run `monews.rb` and the result will show up in rss. Or, use `s3_wrapper.s
 You can build the container via `docker build -t monews:latest .`. When running the container you need to give it a config folder with a `config.yaml` in it. You may copy `config.yaml.example` to `config.yaml` and use this folder. Now you can go ahead and run something like:
 
 ```bash
-docker run --rm -t -v LOCAL_PATH_TO_CONFIG_FOLDER:/opt/monews/config -e "AWS_ACCESS_KEY_ID=..." -e "AWS_SECRET_ACCESS_KEY=..." -e "EC2_URL=https://END-POINT" monews:latest`
+docker run --rm -t -v LOCAL_PATH_TO_CONFIG_FOLDER:/opt/monews/config -e "AWS_ACCESS_KEY_ID=..." -e "AWS_SECRET_ACCESS_KEY=..." -e "EC2_URL=https://END-POINT" monews:latest
 ```
 
 Note that you can find the service endpoints via the [Amazon documentation](http://docs.aws.amazon.com/general/latest/gr/rande.html#ec2_region).
