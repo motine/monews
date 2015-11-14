@@ -1,9 +1,14 @@
 # MoNews
 
+**I abandoned this project around Jan 2015. I moved to a more manual approach. As it turns out this is more fun and suits my habits better.**
+
 ## Idea
+
 This server script scrapes news sources every night at the same time to get the top N articles. RSS feeds like tagesschau offer sorted rss (by importance). Also hackernews (best) is sorted, reddit is sorted and medium monthly things are rated by importance.
 I take snapshots of these sources and put these top N articles as individual RSS feeds on S3.
 This can then be used to import in your favorite RSS reader and have a curated news feed.
+
+![monews overview](https://raw.githubusercontent.com/motine/monews/master/docs/monews.png)
 
 ## Installation
 
